@@ -21,15 +21,26 @@ public class Team {
     @GeneratedValue(
             strategy = GenerationType.IDENTITY
     )
+    @Column("team_id")
     public Long teamId;
 
+    @Column("team_name")
     private String teamName;
+
+    @Column("name_one")
     private String nameOne;
+
+    @Column("name_tow")
     private String nameTwo;
+
+    @Column("score")
     private String score;
+
+    @Column("rank")
     private String rank;
 
     @OneToMany(mappedBy = "team")
+    @Column("team_meets")
     private List<TeamMeet> teamMeets = new ArrayList<>();
     @Column
     @CreationTimestamp

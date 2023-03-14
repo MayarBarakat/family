@@ -19,19 +19,22 @@ import java.util.List;
 @Service
 public class FamilyService {
 
-    final
+
     TeamRepository teamRepository;
 
-    final
+
     MeetRepository meetRepository;
 
-    final
+
     TeamMeetRepository teamMeetRepository;
 
     public FamilyService(TeamRepository teamRepository, MeetRepository meetRepository, TeamMeetRepository teamMeetRepository) {
         this.teamRepository = teamRepository;
         this.meetRepository = meetRepository;
         this.teamMeetRepository = teamMeetRepository;
+    }
+
+    public FamilyService() {
     }
 
     public AddMeetResponse addMeet(AddMeetRequest addMeetRequest) {

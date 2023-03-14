@@ -19,20 +19,14 @@ import java.util.List;
 @Service
 public class FamilyService {
 
-    final
+    @Autowired(required = false)
     TeamRepository teamRepository;
 
-    final
+    @Autowired(required = false)
     MeetRepository meetRepository;
 
-    final
+    @Autowired(required = false)
     TeamMeetRepository teamMeetRepository;
-
-    public FamilyService(TeamRepository teamRepository, MeetRepository meetRepository, TeamMeetRepository teamMeetRepository) {
-        this.teamRepository = teamRepository;
-        this.meetRepository = meetRepository;
-        this.teamMeetRepository = teamMeetRepository;
-    }
 
     public AddMeetResponse addMeet(AddMeetRequest addMeetRequest) {
         Meet meet = new Meet((addMeetRequest.getDate()));

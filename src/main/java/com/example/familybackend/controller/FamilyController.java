@@ -17,23 +17,14 @@ import java.util.ArrayList;
 @RequestMapping("/mobile/api")
 public class FamilyController {
 
-
+    @Autowired
     FamilyService familyService;
 
-
+    @Autowired
     TeamRepository teamRepository;
 
-
+    @Autowired
     MeetRepository meetRepository;
-
-    public FamilyController(FamilyService familyService, TeamRepository teamRepository, MeetRepository meetRepository) {
-        this.familyService = familyService;
-        this.teamRepository = teamRepository;
-        this.meetRepository = meetRepository;
-    }
-
-    public FamilyController() {
-    }
 
     @GetMapping("/build")
     String build(){

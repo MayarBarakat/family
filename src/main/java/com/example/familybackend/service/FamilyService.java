@@ -14,20 +14,25 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 @Service
 public class FamilyService {
 
-    @Autowired
+    final
     TeamRepository teamRepository;
 
-    @Autowired
+    final
     MeetRepository meetRepository;
 
-    @Autowired
+    final
     TeamMeetRepository teamMeetRepository;
+
+    public FamilyService(TeamRepository teamRepository, MeetRepository meetRepository, TeamMeetRepository teamMeetRepository) {
+        this.teamRepository = teamRepository;
+        this.meetRepository = meetRepository;
+        this.teamMeetRepository = teamMeetRepository;
+    }
 
     public AddMeetResponse addMeet(AddMeetRequest addMeetRequest) {
         Meet meet = new Meet((addMeetRequest.getDate()));

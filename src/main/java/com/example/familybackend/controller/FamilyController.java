@@ -20,35 +20,12 @@ public class FamilyController {
     @Autowired
     FamilyService familyService;
 
-    @Autowired
-    TeamRepository teamRepository;
 
-    @Autowired
-    MeetRepository meetRepository;
 
     @GetMapping("/build")
     String build(){
-        Team mayarTeam = new Team(
-                "فريق ميار","ميار","وليد","1","1"
-        );
-        Team amjadTeam = new Team(
-                "فريق أمجد","أمجد","خالد","1","1"
-        );
-        Team mjdTeam = new Team(
-                "فريق مجد","مجد","فؤاد","1","1"
-        );
-        Team daniTeam = new Team(
-                "فريق داني","داني","ابي","1","1"
-        );
-        Team makramTeam = new Team(
-                "فريق مكرم","مكرم","راني","1","1"
-        );
-        teamRepository.save(mayarTeam);
-        teamRepository.save(amjadTeam);
-        teamRepository.save(mjdTeam);
-        teamRepository.save(daniTeam);
-        teamRepository.save(makramTeam);
-        return "Done";
+       return familyService.build();
+       
     }
 
     @GetMapping("/get-all-meet")

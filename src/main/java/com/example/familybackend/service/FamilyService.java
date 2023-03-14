@@ -19,10 +19,10 @@ import java.util.List;
 @Service
 public class FamilyService {
 
-    @Autowired
+    @Autowired(required=true)
     TeamRepository teamRepository;
 
-    @Autowired
+    @Autowired(required=true)
     MeetRepository meetRepository;
 
     @Autowired

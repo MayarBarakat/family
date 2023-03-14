@@ -3,6 +3,7 @@ package com.example.familybackend.entity;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.stereotype.Repository;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -14,6 +15,7 @@ import java.util.Objects;
 
 @Entity(name = "Team")
 @Table(name = "team")
+
 public class Team {
     @Id
     @GeneratedValue(

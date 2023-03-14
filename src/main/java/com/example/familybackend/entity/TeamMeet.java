@@ -3,12 +3,14 @@ package com.example.familybackend.entity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.stereotype.Repository;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity(name = "TeamMeet")
 @Table(name = "team_meet")
+
 public class TeamMeet {
     @Id
     @GeneratedValue(

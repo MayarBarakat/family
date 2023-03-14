@@ -2,6 +2,7 @@ package com.example.familybackend.entity;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.stereotype.Repository;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -11,6 +12,7 @@ import java.util.Set;
 
 @Entity(name = "Meet")
 @Table(name = "family_meet")
+
 public class Meet {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -10,6 +10,7 @@ import com.example.familybackend.repository.MeetRepository;
 import com.example.familybackend.repository.TeamMeetRepository;
 import com.example.familybackend.repository.TeamRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -17,15 +18,17 @@ import java.util.Collections;
 import java.util.List;
 
 @Service
+@ComponentScan({ "com.example.*" })
 public class FamilyService {
 
-    @Autowired(required=true)
+    @Autowired(required=false)
     TeamRepository teamRepository;
 
-    @Autowired(required=true)
+    @Autowired(required=false)
     MeetRepository meetRepository;
 
-    @Autowired
+
+    @Autowired(required = false)
     TeamMeetRepository teamMeetRepository;
 
 

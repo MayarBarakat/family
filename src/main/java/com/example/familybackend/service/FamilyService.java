@@ -21,14 +21,14 @@ import java.util.List;
 
 public class FamilyService {
 
-    @Autowired(required=false)
+    @Autowired
     TeamRepository teamRepository;
 
-    @Autowired(required=false)
+    @Autowired
     MeetRepository meetRepository;
 
 
-    @Autowired(required = false)
+    @Autowired
     TeamMeetRepository teamMeetRepository;
 
 
